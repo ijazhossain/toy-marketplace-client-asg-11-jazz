@@ -5,3 +5,8 @@
 .label-text {
     @apply text-[#874b30]
 }
+
+
+.loading {
+    @apply text-[#874b30] bg-transparent border-none font-extrabold text-2xl
+}

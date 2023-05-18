@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login.jpg'
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import { useContext, useState } from 'react';
@@ -8,7 +8,10 @@ import { AuthContext } from '../../Providers/AuthProvider';
  ============================*/
 const Login = () => {
     const { login } = useContext(AuthContext);
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname;
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +23,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate(from, { replace: true })
             }).catch(error => {
                 console.log(error?.message);
                 setError(error?.message)

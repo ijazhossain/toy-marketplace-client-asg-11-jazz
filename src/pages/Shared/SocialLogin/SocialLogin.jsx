@@ -1,16 +1,21 @@
 import { useContext, useState } from 'react';
 import googleImg from '../../../assets/images/google.png'
 import { AuthContext } from '../../../Providers/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialLogin = ({ children }) => {
     // console.log(children);
     const { googleSignIn, setReload } = useContext(AuthContext);
     const [error, setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
                 setReload(Date.now())
                 console.log(result);
+                navigate(from, { replace: true })
             }).catch(error => {
                 console.log(error.message);
                 setError(error.message)
