@@ -1,16 +1,29 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login.jpg'
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 /* ==========================
             Login
  ============================*/
 const Login = () => {
+    const { login } = useContext(AuthContext);
+    const [error, setError] = useState('')
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        setError('')
+        login(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            }).catch(error => {
+                console.log(error?.message);
+                setError(error?.message)
+            })
     }
     return (
         <>
@@ -18,7 +31,7 @@ const Login = () => {
                 <figure><img src={img} alt="Album" /></figure>
                 <div className="card-body my-auto ">
                     <h2 className="text-[#874b30] font-semibold  text-3xl  ">Welcome Back</h2>
-                    <p className='mb-4'>Please enter your details</p>
+                    <p className='mb-4 text-xs'>Please enter your details</p>
                     <form onSubmit={handleLogin}>
                         <div className="form-control mb-5">
                             <label className="label">
@@ -42,6 +55,7 @@ const Login = () => {
                     </form>
                     <SocialLogin>Log in with Google</SocialLogin>
                     <p className='mt-5'>Do not have an account? <Link to="/registration" className='text-[#874b30] font-semibold '>Sign up for free</Link></p>
+                    <p className='text-red-500 font-bold'>{error}</p>
 
                 </div>
 
