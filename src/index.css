@@ -6,6 +6,10 @@
     @apply text-[#874b30]
 }
 
+.table {
+    @apply rounded-xl text-[#874b30] border border-[#874b30]
+}
+
 
 .loading {
     @apply text-[#874b30] bg-transparent border-none font-extrabold text-2xl
