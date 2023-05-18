@@ -1,39 +1,53 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login.jpg'
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 /* ==========================
             Login
  ============================*/
 const Login = () => {
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+    }
     return (
-        <div className="card lg:card-side w-[80%] mx-auto border border-[#874b30] bg-white my-24">
-            <figure><img src={img} alt="Album" /></figure>
-            <div className="card-body my-auto ">
-                <h2 className="text-[#874b30] font-semibold  text-3xl text-center mb-6">Please Login</h2>
-                <form className=''>
-                    <div className="form-control mb-5">
-                        <label className="label">
-                            <span className="label-text">Email</span>
-                        </label>
-                        <label className="input-group">
+        <>
+            <div className="card lg:card-side w-[80%] mx-auto border border-[#874b30] bg-white my-24">
+                <figure><img src={img} alt="Album" /></figure>
+                <div className="card-body my-auto ">
+                    <h2 className="text-[#874b30] font-semibold  text-3xl  ">Welcome Back</h2>
+                    <p className='mb-4'>Please enter your details</p>
+                    <form onSubmit={handleLogin}>
+                        <div className="form-control mb-5">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <label className="input-group">
 
-                            <input type="email" name='email' placeholder="Email" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Password</span>
-                        </label>
-                        <label className="input-group">
+                                <input type="email" name='email' placeholder="Email" className="input input-bordered w-full" required />
+                            </label>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <label className="input-group">
 
-                            <input type="password" name='email' placeholder="password" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <input className='w-full bg-[#874b30] mt-8 py-2 text-white rounded-lg' type="submit" value="Login" />
-                </form>
-                <p className='mt-5'>Create an account? <Link to="/registration" className='text-[#874b30] font-semibold '>Register</Link></p>
+                                <input type="password" name='password' placeholder="password" className="input input-bordered w-full" required />
+                            </label>
+                        </div>
+                        <input className='w-full bg-[#874b30] mt-8 py-2 text-white rounded-lg' type="submit" value="Login" />
+                    </form>
+                    <SocialLogin>Log in with Google</SocialLogin>
+                    <p className='mt-5'>Do not have an account? <Link to="/registration" className='text-[#874b30] font-semibold '>Sign up for free</Link></p>
+
+                </div>
 
             </div>
-        </div>
+
+        </>
     );
 };
 
