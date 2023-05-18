@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from '../../../assets/images/add-toy.jpg'
+import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 /* =======================================
             Add Toy Page
 ========================================== */
 
 const AddToys = () => {
+    const { user } = useContext(AuthContext)
+    console.log(user);
     const handleAddToy = (event) => {
         event.preventDefault()
         const form = event.target;
@@ -18,7 +22,27 @@ const AddToys = () => {
         const quantity = form.quantity.value;
         const ratings = form.ratings.value;
         const description = form.description.value;
-        console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
+        // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
+        const newToy = { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description }
+        // console.log(newToy);
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(newToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Your toy added successfully',
+
+                    })
+                }
+            })
+
     }
     return (
         <div className='w-[90%] md:w-[80%] mx-auto grid lg:grid-cols-2  bg-white my-24 border border-[#874b30]'>
@@ -53,7 +77,7 @@ const AddToys = () => {
                     </label>
                     <label className="input-group">
 
-                        <input type="text" name="sellerName" placeholder="Seller name" className="input input-bordered w-full" required />
+                        <input type="text" name="sellerName" placeholder="Seller name" className="input input-bordered w-full" defaultValue={user?.displayName} readOnly />
                     </label>
                 </div>
 
@@ -63,7 +87,7 @@ const AddToys = () => {
                     </label>
                     <label className="input-group">
 
-                        <input type="email" name="sellerEmail" placeholder="Seller email" className="input input-bordered w-full" required />
+                        <input type="email" name="sellerEmail" placeholder="Seller email" className="input input-bordered w-full" defaultValue={user?.email} readOnly />
                     </label>
                 </div>
                 <div>
