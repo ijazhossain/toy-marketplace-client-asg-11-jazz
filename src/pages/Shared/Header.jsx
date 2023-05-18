@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 
 const Header = () => {
+    const user = { name: "uu" }
     const navItems = <>
         <Link className='mr-4' to="/">Home</Link>
         <Link className='mr-4' to="/allToys">All Toys</Link>
@@ -33,9 +34,12 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                {!user ? <div className="navbar-end">
                     <a className="btn">Logout</a>
-                </div>
+                </div> :
+                    <Link to="/login" className="navbar-end"><div className='btn'>
+                        LogIn
+                    </div></Link>}
             </div>
         </div>
     );
