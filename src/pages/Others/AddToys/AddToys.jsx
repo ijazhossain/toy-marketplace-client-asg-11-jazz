@@ -18,9 +18,9 @@ const AddToys = () => {
         const sellerName = form.sellerName.value;
         const sellerEmail = form.sellerEmail.value;
         const category = form.category.value;
-        const price = form.price.value;
-        const quantity = form.quantity.value;
-        const ratings = form.ratings.value;
+        const price = parseFloat(form.price.value);
+        const quantity = parseInt(form.quantity.value);
+        const ratings = parseFloat(form.ratings.value);
         const description = form.description.value;
         // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
         const newToy = { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description }
