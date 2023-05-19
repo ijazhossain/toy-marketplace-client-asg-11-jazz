@@ -27,15 +27,16 @@ const MyToys = () => {
                 {/* head */}
                 <thead>
                     <tr>
-                        <th>
-                            <label>
+                        <th className='bg-[#874b30] text-white'>
 
-                            </label>
                         </th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
-                        <th></th>
+                        <th className='bg-[#874b30] text-white'>Toy Name</th>
+                        <th className='bg-[#874b30] text-white'>Seller name / Email</th>
+                        <th className='bg-[#874b30] text-white'>Sub-category</th>
+                        <th className='bg-[#874b30] text-white'>Price</th>
+                        <th className='bg-[#874b30] text-white'>Ratings</th>
+                        <th className='bg-[#874b30] text-white'>Quantity</th>
+                        <th className='bg-[#874b30] text-white'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,7 +77,7 @@ const MyToys = () => {
                             <td>{myToy?.quantity}</td>
                             <th>
                                 {/* Modal BTN */}
-                                <label htmlFor="my-modal-6" className="btn">open modal</label>
+                                <label htmlFor="my-modal-6" className="btn btn-sm bg-[#874b30] border-0">Update</label>
                                 {/* Modal body */}
                                 <Modal myToy={myToy}></Modal>
 

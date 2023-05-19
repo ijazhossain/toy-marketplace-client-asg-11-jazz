@@ -66,7 +66,7 @@ const AllToys = () => {
                                 <td>{toy.category.toUpperCase()}</td>
                                 <td>${toy.price}</td>
                                 <td>{toy.quantity}</td>
-                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 font-semibold  bg-[#874b30] text-white rounded-lg h-[40px] px-5 '>Details</button></td>
+                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 bg-[#874b30] text-white rounded-lg h-[40px] btn btn-sm border-0 text-xs '>Details</button></td>
                             </tr>)
                         }
                     </tbody>

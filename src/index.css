@@ -17,7 +17,7 @@
 
 
 .loading {
-    @apply text-[#874b30] bg-transparent border-none font-extrabold text-2xl
+    @apply text-[#874b30] bg-transparent border-none font-semibold text-2xl
 }
 
 .modal-box {
