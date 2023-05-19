@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.label-text {
+.label-text,
+.card {
     @apply text-[#874b30]
+}
+
+.card-body :where(p) {
+    @apply flex-grow-0
 }
 
 .table {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from '../../Shared/Spinner/Spinner';
+import { useNavigate } from 'react-router-dom';
 /* ==============================
         All Toys Page
 ================================= */
@@ -8,6 +9,7 @@ const AllToys = () => {
     const [toys, setToys] = useState([])
     const [loading, setLoading] = useState(true)
     const [searchText, setSearchText] = useState('')
+    const navigate = useNavigate();
 
     // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
     const handleSearch = () => {
@@ -61,10 +63,10 @@ const AllToys = () => {
                                 <th>{index + 1}</th>
                                 <td>{toy.sellerName}</td>
                                 <td>{toy.toyName}</td>
-                                <td>{toy.category}</td>
+                                <td>{toy.category.toUpperCase()}</td>
                                 <td>${toy.price}</td>
                                 <td>{toy.quantity}</td>
-                                <td><button className='ml-5 font-semibold  bg-[#874b30] text-white rounded-lg h-[40px] px-5 '>Details</button></td>
+                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 font-semibold  bg-[#874b30] text-white rounded-lg h-[40px] px-5 '>Details</button></td>
                             </tr>)
                         }
                     </tbody>
