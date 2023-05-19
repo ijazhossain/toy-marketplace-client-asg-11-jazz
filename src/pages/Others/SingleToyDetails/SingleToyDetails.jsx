@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from '../../Shared/Spinner/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
-
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
+/* ==================================
+        Single Job Details
+====================================== */
 const SingleToyDetails = () => {
     const [toyDetails, setToyDetails] = useState({})
     const [loading, setLoading] = useState(true)
     const { toyId } = useParams();
-    console.log(toyId);
+    // console.log(toyId);
     const { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description } = toyDetails;
     useEffect(() => {
         fetch(`http://localhost:5000/toy/${toyId}`)

@@ -19,3 +19,7 @@
 .loading {
     @apply text-[#874b30] bg-transparent border-none font-extrabold text-2xl
 }
+
+.modal-box {
+    @apply rounded-3xl
+}

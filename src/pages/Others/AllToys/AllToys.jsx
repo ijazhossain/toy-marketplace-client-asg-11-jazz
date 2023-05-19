@@ -25,7 +25,7 @@ const AllToys = () => {
         const fetchData = async () => {
             const response = await fetch('http://localhost:5000/allToys')
             const toysData = await response.json()
-            console.log(toysData);
+            // console.log(toysData);
             setToys(toysData)
             setLoading(false)
 

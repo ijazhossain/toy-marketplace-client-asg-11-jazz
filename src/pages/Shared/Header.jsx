@@ -17,7 +17,9 @@ const Header = () => {
     const navItems = <>
         <Link className='ml-5 font-semibold' to="/">Home</Link>
         <Link className='ml-5 font-semibold' to="/allToys">All Toys</Link>
+
         <Link className='ml-5 font-semibold' to="/addToy">Add A Toy </Link>
+        <Link className='ml-5 font-semibold' to="/myToys">My Toys </Link>
         <Link className='ml-5 font-semibold' to="/blogs">Blogs</Link>
         <span className="tooltip" data-tip={user?.displayName}>{user && <img width="60px" height="60px" className='rounded-full ml-5 border-2 border-[#874b30]' src={user?.photoURL} />}</span>
         {

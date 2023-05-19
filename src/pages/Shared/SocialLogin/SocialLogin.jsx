@@ -14,7 +14,7 @@ const SocialLogin = ({ children }) => {
         googleSignIn()
             .then(result => {
                 setReload(Date.now())
-                console.log(result);
+                // console.log(result);
                 navigate(from, { replace: true })
             }).catch(error => {
                 console.log(error.message);

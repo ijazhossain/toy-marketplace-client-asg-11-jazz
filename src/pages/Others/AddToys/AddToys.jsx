@@ -134,7 +134,7 @@ const AddToys = () => {
                     <label className="label">
                         <span className="label-text">Detail description</span>
                     </label>
-                    <textarea className="textarea textarea-bordered w-full" name="description" placeholder="Detail description" required></textarea>
+                    <textarea className="textarea textarea-bordered w-full textarea-lg " name="description" placeholder="Detail description" required></textarea>
 
                 </div>
                 <input type="submit" className="btn bg-[#874b30] w-full mt-8" value="Add Toy" />
