@@ -8,16 +8,19 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToyDetails, setMyToyDetails] = useState([])
     const [loading, setLoading] = useState(true)
+    const [reload, setReload] = useState(0)
+
+
     useEffect(() => {
         fetch(`http://localhost:5000/myToy?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setMyToyDetails(data);
                 setLoading(false)
 
             })
-    }, [user?.email])
+    }, [user?.email, reload])
     if (loading) {
         return <Spinner></Spinner>
     }
@@ -79,7 +82,10 @@ const MyToys = () => {
                                 {/* Modal BTN */}
                                 <label htmlFor="my-modal-6" className="btn btn-sm bg-[#874b30] border-0">Update</label>
                                 {/* Modal body */}
-                                <Modal myToy={myToy}></Modal>
+                                <Modal
+                                    myToy={myToy}
+                                    setReload={setReload}
+                                ></Modal>
 
                             </th>
                         </tr>)

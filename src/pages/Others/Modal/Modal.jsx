@@ -1,10 +1,14 @@
-import { faCancel, faCross, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Swal from 'sweetalert2';
+/* ===================================
+        Modal to update toy info
+======================================= */
 
-const Modal = ({ myToy }) => {
-    console.log(myToy);
-    const { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description } = myToy;
+const Modal = ({ myToy, setReload }) => {
+    // console.log(myToy);
+    const { _id, imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description } = myToy;
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -12,6 +16,31 @@ const Modal = ({ myToy }) => {
         const quantity = form.quantity.value;
         const description = form.description.value;
         console.log(price, quantity, description);
+        const updateToy = {
+            price,
+            quantity,
+            description,
+        }
+        fetch(`http://localhost:5000/updateToy/${_id}`, {
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(updateToy)
+        })
+
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    setReload(Date.now())
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Updated toy data successfully ',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
+                }
+            })
+
 
     }
     return (
@@ -44,12 +73,12 @@ const Modal = ({ myToy }) => {
                             <label className="label">
                                 <span className="label-text">Detail description</span>
                             </label>
-                            <textarea className="textarea textarea-bordered w-full text-[#8b6753] text-sm textarea-lg " name="description" placeholder="Detail description " defaultValue={description}></textarea>
+                            <textarea rows="7" className="rounded-lg w-full text-[#8b6753] text-sm textarea-lg " name="description" placeholder="Detail description " defaultValue={description}></textarea>
 
                         </div>
 
 
-                        <input type="submit" className="btn bg-[#874b30] w-full mt-8" value="Update" />
+                        <input type="submit" className="btn bg-[#874b30] w-full mt-8 border-none" value="Update" />
 
                     </form>
                     <div className="modal-action">
