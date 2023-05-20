@@ -13,7 +13,7 @@ const SingleToyDetails = () => {
     // console.log(toyId);
     const { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description } = toyDetails;
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/${toyId}`)
+        fetch(`https://toy-store-server-asg-11.vercel.app/toy/${toyId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

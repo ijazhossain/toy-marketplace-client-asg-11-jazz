@@ -25,7 +25,7 @@ const AddToys = () => {
         // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
         const newToy = { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description }
         // console.log(newToy);
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://toy-store-server-asg-11.vercel.app/addToy', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newToy)
@@ -95,7 +95,7 @@ const AddToys = () => {
                         <span className="label-text">Select category</span>
                     </label>
                     <select className="select select-bordered w-full" name="category" required>
-                        <option>Teddy Beer</option>
+                        <option>Teddy Bear</option>
                         <option>Bird Toy</option>
                         <option>Dinosaur Toy</option>
                         <option>Fish Toy</option>

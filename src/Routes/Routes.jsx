@@ -10,6 +10,7 @@ import NotFound from "../pages/Others/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import SingleToyDetails from "../pages/Others/SingleToyDetails/SingleToyDetails";
 import MyToys from "../pages/Others/MyToys/MyToys";
+import UpdateToy from "../pages/Others/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
             {
                 path: '/toy/:toyId',
                 element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>
+
+            },
+            {
+                path: '/updateToy/:id',
+                element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://toy-store-server-asg-11.vercel.app/updateToy/${params.id}`)
 
             },
             {

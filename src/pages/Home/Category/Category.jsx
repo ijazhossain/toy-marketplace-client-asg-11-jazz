@@ -10,12 +10,12 @@ const Category = () => {
     const handleLinkClick = (categoryName) => {
         setCategory(categoryName)
     }
-    console.log(category);
+    // console.log(category);
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${category}`)
+        fetch(`https://toy-store-server-asg-11.vercel.app/category/${category}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setCategoryData(data)
             })
     }, [category])

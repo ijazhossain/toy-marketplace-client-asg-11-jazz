@@ -13,7 +13,7 @@ const AllToys = () => {
 
     // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToysByName/${searchText}`)
+        fetch(`https://toy-store-server-asg-11.vercel.app/getToysByName/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -23,7 +23,7 @@ const AllToys = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:5000/allToys')
+            const response = await fetch('https://toy-store-server-asg-11.vercel.app/allToys')
             const toysData = await response.json()
             // console.log(toysData);
             setToys(toysData)
