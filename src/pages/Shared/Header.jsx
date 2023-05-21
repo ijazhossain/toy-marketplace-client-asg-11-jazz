@@ -17,8 +17,8 @@ const Header = () => {
     const navItems = <>
         <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/">Home</Link>
         <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/allToys">All Toys</Link>
-        <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/addToy">Add A Toy </Link>
-        <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/myToys">My Toys </Link>
+        {user && <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/addToy">Add A Toy </Link>}
+        {user && <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/myToys">My Toys </Link>}
         <Link className='text-[#8b6753] ml-7 font-semibold text-[17px] mb-2 lg:mb-0' to="/blogs">Blogs</Link>
         <span className="tooltip" data-tip={user?.displayName}>{user && <img width="60px" height="60px" className='mb-2 lg:mb-0 rounded-full ml-7 border-2 border-[#8b6753]' src={user?.photoURL} />}</span>
         {
