@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.ts-heading {
+    color: #8b6753;
+    font-weight: 600;
+}
+
+.ts-paragraph {
+    color: #8b6753;
+    font-size: 17px;
+}
+
 .label-text,
 .card {
     @apply text-[#8b6753]
@@ -22,4 +32,24 @@
 
 .modal-box {
     @apply rounded-3xl
+}
+
+@media screen and (min-width : 992px) and (max-width: 1200px) {
+    .intro-img-top {
+        right: -80px;
+    }
+
+    .intro-img-bottom {
+        left: -80px;
+    }
+}
+
+@media screen and (min-width : 1201px) and (max-width: 1536px) {
+    .intro-img-top {
+        right: -100px;
+    }
+
+    .intro-img-bottom {
+        left: -100px;
+    }
 }
