@@ -34,6 +34,7 @@
     @apply rounded-3xl
 }
 
+
 @media screen and (min-width : 992px) and (max-width: 1200px) {
     .intro-img-top {
         right: -80px;
@@ -42,6 +43,14 @@
     .intro-img-bottom {
         left: -80px;
     }
+}
+
+.about-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.605)), url('./assets/images/about-banner.jpg');
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 @media screen and (min-width : 1201px) and (max-width: 1536px) {

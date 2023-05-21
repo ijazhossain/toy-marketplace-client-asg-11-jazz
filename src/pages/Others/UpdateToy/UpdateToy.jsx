@@ -43,7 +43,7 @@ const UpdateToy = () => {
     return (
 
         <div className="card lg:card-side w-[80%] mx-auto border border-[#8b6753] bg-white my-24">
-            <figure className='w-1/4'><img className='h-full' src={imageUrl} alt="Album" /></figure>
+            <figure className='w-full lg:w-1/4'><img className='h-full' src={imageUrl} alt="Album" /></figure>
             <div className="card-body my-auto ">
                 <h2 className="text-[#8b6753] font-semibold  text-3xl  ">{toyName}</h2>
                 <p className='mb-4 text-xs'>Please enter your update details</p>
@@ -55,7 +55,7 @@ const UpdateToy = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="number" name="price" placeholder="$price" className="input input-bordered w-full text-[#8b6753]" defaultValue={price} />
+                            <input type="number" name="price" placeholder="$price" className="input input-bordered w-full text-[#8b6753]" min="1" defaultValue={price} />
                         </label>
                     </div>
                     <div className="form-control">
@@ -64,7 +64,7 @@ const UpdateToy = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full text-[#8b6753]" defaultValue={quantity} />
+                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full text-[#8b6753]" min="1" defaultValue={quantity} />
                         </label>
                     </div>
 

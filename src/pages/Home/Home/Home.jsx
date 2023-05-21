@@ -3,6 +3,8 @@ import Banner from '../Banner/Banner';
 import Category from '../Category/Category';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Intro from '../Intro/Intro';
+import About from '../About/About';
+
 
 
 const Home = () => {
@@ -12,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Intro></Intro>
             <Category></Category>
+            <About></About>
             <ImageGallery></ImageGallery>
         </div>
     );

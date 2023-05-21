@@ -3,6 +3,7 @@ import img from '../../../assets/images/add-toy.jpg'
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 /* =======================================
             Add Toy Page
 ========================================== */
@@ -22,6 +23,7 @@ const AddToys = () => {
         const quantity = parseInt(form.quantity.value);
         const ratings = parseFloat(form.ratings.value);
         const description = form.description.value;
+
         // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
         const newToy = { imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description }
         // console.log(newToy);
@@ -109,7 +111,7 @@ const AddToys = () => {
                     </label>
                     <label className="input-group">
 
-                        <input type="number" name="price" placeholder="$price" className="input input-bordered w-full" required />
+                        <input type="number" name="price" placeholder="$price" className="input input-bordered w-full" min="1" required />
                     </label>
                 </div>
                 <div className="form-control">
@@ -118,7 +120,7 @@ const AddToys = () => {
                     </label>
                     <label className="input-group">
 
-                        <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full" required />
+                        <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full" min="1" required />
                     </label>
                 </div>
                 <div className="form-control">
@@ -127,7 +129,7 @@ const AddToys = () => {
                     </label>
                     <label className="input-group">
 
-                        <input type="number" name="ratings" placeholder="Ratings" className="input input-bordered w-full" required />
+                        <input type="number" name="ratings" placeholder="Ratings" className="input input-bordered w-full" min="1" required />
                     </label>
                 </div>
                 <div>

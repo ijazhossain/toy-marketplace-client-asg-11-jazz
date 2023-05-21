@@ -31,7 +31,7 @@ const Header = () => {
     </>
     return (
         <div className='bg-white py-3 text-[#8b6753]'>
-            <div className="navbar w-[80%]   mx-auto">
+            <div className="navbar w-full lg:w-[80%] mx-auto">
                 <div className="">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,9 +42,9 @@ const Header = () => {
                         </ul>
 
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">
+                    <Link to="/" className="flex items-center justify-center normal-case text-xl">
                         <img src={logo} alt="" />
-                        <span className='ml-3 font-bold text-2xl'>Toylandia</span></a>
+                        <span className='ml-3 font-bold text-2xl'>Toylandia</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex justify-end w-[80%]">
                     <ul className="menu menu-horizontal px-1 flex items-center">
