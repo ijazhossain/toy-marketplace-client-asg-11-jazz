@@ -25,6 +25,7 @@ LINK: [Click here to see the Toy marketplace project](https://toy-store-client-a
  npm install express
  npm install cors
  npm install mongoDB
+ npm install aos
 ```
 
 ## Description

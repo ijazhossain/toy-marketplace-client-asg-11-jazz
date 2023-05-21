@@ -4,6 +4,7 @@ import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+
 /* ==========================
             Login
  ============================*/

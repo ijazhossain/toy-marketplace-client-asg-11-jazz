@@ -11,7 +11,7 @@ import useTitle from '../../../hooks/useTitle';
 
 const AddToys = () => {
     const { user } = useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
     useTitle('Add Toy')
     const handleAddToy = (event) => {
         event.preventDefault()

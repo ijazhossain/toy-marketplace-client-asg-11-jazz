@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Spinner from '../../Shared/Spinner/Spinner';
 import { useNavigate } from 'react-router-dom';
 import useTitle from '../../../hooks/useTitle';
+import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 /* ==============================
         All Toys Page
 ================================= */
 
 const AllToys = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user);
     const [toys, setToys] = useState([])
     const [loading, setLoading] = useState(true)
     const [searchText, setSearchText] = useState('')
     const navigate = useNavigate();
     useTitle('All Toys')
     // console.log(imageUrl, toyName, sellerName, sellerEmail, category, price, quantity, ratings, description);
+
     const handleSearch = () => {
         fetch(`https://toy-store-server-asg-11.vercel.app/getToysByName/${searchText}`)
             .then(res => res.json())
@@ -67,7 +72,27 @@ const AllToys = () => {
                                 <td>{toy.category.toUpperCase()}</td>
                                 <td>${toy.price}</td>
                                 <td>{toy.quantity}</td>
-                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 bg-[#8b6753] text-white rounded-lg h-[40px] btn btn-sm border-0 text-xs '>Details</button></td>
+                                <td><button onClick={() => {
+                                    if (!user) {
+                                        Swal.fire({
+                                            title: "You have to log in first to view details",
+
+                                            icon: 'warning',
+                                            showCancelButton: true,
+                                            confirmButtonColor: '#3085d6',
+                                            cancelButtonColor: '#d33',
+                                            confirmButtonText: 'Login'
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+
+                                                navigate('/login')
+                                            }
+                                        })
+
+                                    } else {
+                                        navigate(`/toy/${toy._id}`)
+                                    }
+                                }} className='ml-5 bg-[#8b6753] text-white rounded-lg h-[40px] btn btn-sm border-0 text-xs '>Details</button></td>
                             </tr>)
                         }
                     </tbody>
@@ -75,6 +100,7 @@ const AllToys = () => {
 
 
             </div>
+
         </div>
     );
 };
