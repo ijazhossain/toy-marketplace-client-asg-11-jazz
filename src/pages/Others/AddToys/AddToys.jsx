@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import img from '../../../assets/images/add-toy.jpg'
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../../hooks/useTitle';
 
 
 /* =======================================
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2';
 const AddToys = () => {
     const { user } = useContext(AuthContext)
     console.log(user);
+    useTitle('Add Toy')
     const handleAddToy = (event) => {
         event.preventDefault()
         const form = event.target;

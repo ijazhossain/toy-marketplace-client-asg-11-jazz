@@ -4,6 +4,7 @@ import Spinner from '../../Shared/Spinner/Spinner';
 import Swal from 'sweetalert2';
 import Sort from '../Sort/Sort';
 import TableRow from '../TableRow/TableRow';
+import useTitle from '../../../hooks/useTitle';
 
 /* =============================
         MY Toys Page
@@ -16,6 +17,7 @@ const MyToys = () => {
     const [selectedOption, setSelectedOption] = useState('')
     const [ascendingData, setAscendingData] = useState([])
     const [descendingData, setDescendingData] = useState([])
+    useTitle('My Toys')
 
     const handleDelete = (_id) => {
         // console.log(_id);

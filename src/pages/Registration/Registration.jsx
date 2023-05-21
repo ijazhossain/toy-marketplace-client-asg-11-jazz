@@ -6,6 +6,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import { sendEmailVerification, updateProfile } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 /* =============================
         Registration
 ================================= */
@@ -13,6 +14,7 @@ const Registration = () => {
     const { createUser, setReload } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    useTitle('Registration')
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;

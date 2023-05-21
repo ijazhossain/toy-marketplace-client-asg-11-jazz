@@ -3,6 +3,7 @@ import img from '../../assets/images/login.jpg'
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 /* ==========================
             Login
  ============================*/
@@ -12,6 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/';
+    useTitle('Login')
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
