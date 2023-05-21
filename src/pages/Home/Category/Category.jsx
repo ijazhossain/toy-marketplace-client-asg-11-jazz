@@ -21,7 +21,7 @@ const Category = () => {
     }, [category])
     return (
         <div className='w-[80%] mx-auto my-16 lg:my-32'>
-            <nav className='flex justify-center min-h-[35px] mb-0 lg:mb-20'>
+            <nav className='flex justify-center min-h-[35px] mb-12 lg:mb-20'>
                 <NavLink onClick={() => handleLinkClick('teddy bear')} className={({ isActive }) =>
                     isActive ? "me-6 lg:me-12 text-[#8b6753] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[2px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2 text-lg" : "me-5 text-[#8b6753] font-bold"
                 }>Teddy beer</NavLink>
@@ -43,7 +43,7 @@ const Category = () => {
                     ></SingleCategory>)
                 }
             </div>
-            <button onClick={() => setShowAll(!showAll)} className='btn  btn-wide mx-auto mt-12 flex items-center justify-center bg-[#8b6753] border-0'>{!showAll ? 'Show All' : 'Show Less'}</button>
+            <button onClick={() => setShowAll(!showAll)} className='btn  btn-wide mx-auto mt-12 lg:mt-20 flex items-center justify-center bg-[#8b6753] border-0 capitalize'>{!showAll ? 'Show All' : 'Show Less'}</button>
 
         </div>
     );

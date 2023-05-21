@@ -16,10 +16,15 @@ const ImageGallery = () => {
 
 
     return (
-        <div className='grid grid-cols-6 gap-1 w-[80%] mx-auto '>
-            {
-                images.map(image => <img className='h-full' src={image.imageUrl} key={image._id} />)
-            }
+
+        <div className='w-[80%] mx-auto'>
+            <h2 className='text-3xl ts-heading mb-10'>The Toy's Gallery</h2>
+            <div className='grid grid-cols-6 gap-1 '>
+
+                {
+                    images.map(image => <img className='h-full' src={image.imageUrl} key={image._id} />)
+                }
+            </div>
         </div>
     );
 };

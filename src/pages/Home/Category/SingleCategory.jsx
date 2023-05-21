@@ -23,10 +23,10 @@ const SingleCategory = ({ item }) => {
                         {ratings} stars
                     </p>
 
-                    <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'></p>
+                    {/* <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'></p> */}
                 </div>
                 <div className="card-actions justify-end mt-auto">
-                    <button onClick={() => navigate(`/toy/${item._id}`)} className="btn bg-[#8b6753] border-0 text-white">Details</button>
+                    <button onClick={() => navigate(`/toy/${item._id}`)} className="btn bg-[#8b6753] border-0 text-white capitalize">Details</button>
                 </div>
             </div>
         </div>
