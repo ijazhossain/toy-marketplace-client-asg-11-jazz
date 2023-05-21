@@ -42,7 +42,7 @@ const AllToys = () => {
         <div className='w-[80%] mx-auto'>
             <div className='relative w-full lg:w-1/2 mx-auto my-12'>
                 <input onChange={e => setSearchText(e.target.value)} className='w-full h-12 border border-[#8b6753] rounded-xl text-[#8b6753] px-5' type="search" name="" id="" placeholder='Search By Name' />
-                <button onClick={handleSearch} className='w-full mt-4 lg:mt-0 rounded-xl lg:absolute top-0 right-0 h-12 bg-[#8b6753] lg:rounded-s-none lg:rounded-e-xl px-5 text-white'>Search</button>
+                <button onClick={handleSearch} className='w-full lg:w-fit mt-4 lg:mt-0 rounded-xl lg:absolute top-0 right-0 h-12 bg-[#8b6753] lg:rounded-s-none lg:rounded-e-xl px-5 text-white'>Search</button>
             </div>
             <div>
 
