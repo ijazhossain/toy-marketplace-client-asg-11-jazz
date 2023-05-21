@@ -16,9 +16,9 @@ const SingleCategory = ({ item }) => {
                         {toyName}
                     </h2>
 
-                    <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#874b30] font-bold'>Price: </span> ${price}</p>
+                    <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#8b6753] font-bold'>Price: </span> ${price}</p>
                     <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'>
-                        <span className='text-[#874b30] font-bold'>Ratings: </span>
+                        <span className='text-[#8b6753] font-bold'>Ratings: </span>
 
                         {ratings} stars
                     </p>

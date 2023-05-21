@@ -23,7 +23,7 @@ const SocialLogin = ({ children }) => {
     }
     return (
         <>
-            <button onClick={handleGoogleSignIn} className='border border-[#874b30] text-[#874b30] w-full mt-3 py-2 font-semibold rounded-lg flex items-center justify-center'>
+            <button onClick={handleGoogleSignIn} className='border border-[#8b6753] text-[#8b6753] w-full mt-3 py-2 font-semibold rounded-lg flex items-center justify-center'>
                 <img className='mr-3' width="20px" src={googleImg} alt="google img" />
                 <span>{children}</span>
             </button>

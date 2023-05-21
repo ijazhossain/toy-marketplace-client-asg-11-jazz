@@ -90,16 +90,16 @@ const MyToys = () => {
                 {/* head */}
                 <thead>
                     <tr>
-                        <th className='bg-[#874b30] text-white'>
+                        <th className='bg-[#8b6753] text-white'>
 
                         </th>
-                        <th className='bg-[#874b30] text-white'>Toy Name</th>
-                        <th className='bg-[#874b30] text-white'>Seller name / Email</th>
-                        <th className='bg-[#874b30] text-white'>Sub-category</th>
-                        <th className='bg-[#874b30] text-white'>Price</th>
-                        <th className='bg-[#874b30] text-white'>Ratings</th>
-                        <th className='bg-[#874b30] text-white'>Quantity</th>
-                        <th className='bg-[#874b30] text-white'></th>
+                        <th className='bg-[#8b6753] text-white'>Toy Name</th>
+                        <th className='bg-[#8b6753] text-white'>Seller name / Email</th>
+                        <th className='bg-[#8b6753] text-white'>Sub-category</th>
+                        <th className='bg-[#8b6753] text-white'>Price</th>
+                        <th className='bg-[#8b6753] text-white'>Ratings</th>
+                        <th className='bg-[#8b6753] text-white'>Quantity</th>
+                        <th className='bg-[#8b6753] text-white'></th>
                     </tr>
                 </thead>
                 <tbody>

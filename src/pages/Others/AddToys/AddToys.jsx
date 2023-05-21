@@ -45,7 +45,7 @@ const AddToys = () => {
 
     }
     return (
-        <div className='w-[90%] md:w-[80%] mx-auto grid lg:grid-cols-2  bg-white my-24 border border-[#874b30]'>
+        <div className='w-[90%] md:w-[80%] mx-auto grid lg:grid-cols-2  bg-white my-24 border border-[#8b6753]'>
 
             <img className='h-full' src={img} alt="banner img" />
             <form onSubmit={handleAddToy} className='flex flex-col  justify-between p-12'>
@@ -137,7 +137,7 @@ const AddToys = () => {
                     <textarea className="textarea textarea-bordered w-full textarea-lg " name="description" placeholder="Detail description" required></textarea>
 
                 </div>
-                <input type="submit" className="btn bg-[#874b30] w-full mt-8" value="Add Toy" />
+                <input type="submit" className="btn bg-[#8b6753] w-full mt-8" value="Add Toy" />
             </form>
 
         </div>

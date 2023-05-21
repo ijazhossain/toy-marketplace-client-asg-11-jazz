@@ -31,10 +31,10 @@ const Login = () => {
     }
     return (
         <>
-            <div className="card lg:card-side w-[80%] mx-auto border border-[#874b30] bg-white my-24">
+            <div className="card lg:card-side w-[80%] mx-auto border border-[#8b6753] bg-white my-24">
                 <figure><img src={img} alt="Album" /></figure>
                 <div className="card-body my-auto ">
-                    <h2 className="text-[#874b30] font-semibold  text-3xl  ">Welcome Back</h2>
+                    <h2 className="text-[#8b6753] font-semibold  text-3xl  ">Welcome Back</h2>
                     <p className='mb-4 text-xs'>Please enter your details</p>
                     <form onSubmit={handleLogin}>
                         <div className="form-control mb-5">
@@ -55,10 +55,10 @@ const Login = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered w-full" required />
                             </label>
                         </div>
-                        <input className='w-full bg-[#874b30] mt-8 py-2 text-white rounded-lg' type="submit" value="Login" />
+                        <input className='w-full bg-[#8b6753] mt-8 py-2 text-white rounded-lg' type="submit" value="Login" />
                     </form>
                     <SocialLogin>Log in with Google</SocialLogin>
-                    <p className='mt-5'>Do not have an account? <Link to="/registration" className='text-[#874b30] font-semibold '>Sign up for free</Link></p>
+                    <p className='mt-5'>Do not have an account? <Link to="/registration" className='text-[#8b6753] font-semibold '>Sign up for free</Link></p>
                     <p className='text-red-500 font-bold'>{error}</p>
 
                 </div>

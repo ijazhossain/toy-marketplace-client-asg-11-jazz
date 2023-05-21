@@ -27,7 +27,7 @@ const SingleToyDetails = () => {
     }
     return (
         <div>
-            <div className="card lg:card-side w-[80%] mx-auto bg-white my-20 border border-[#874b30] ">
+            <div className="card lg:card-side w-[80%] mx-auto bg-white my-20 border border-[#8b6753] ">
                 <figure><img src={imageUrl} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold text-xl lg:text-4xl mb-4 lg:mb-10">
@@ -35,12 +35,12 @@ const SingleToyDetails = () => {
                     </h2>
                     <div className='mb-8'>
                         <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'>
-                            <span className='text-[#874b30] font-bold'>Seller name:</span> {sellerName}
+                            <span className='text-[#8b6753] font-bold'>Seller name:</span> {sellerName}
                         </p>
-                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#874b30] font-bold'>Seller email: </span>{sellerEmail} </p>
-                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#874b30] font-bold'>Price: </span> ${price}</p>
+                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#8b6753] font-bold'>Seller email: </span>{sellerEmail} </p>
+                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#8b6753] font-bold'>Price: </span> ${price}</p>
                         <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'>
-                            <span className='text-[#874b30] font-bold'>Ratings: </span>
+                            <span className='text-[#8b6753] font-bold'>Ratings: </span>
                             <FontAwesomeIcon className='text-[#FDCC0D]' icon={faStar} />
                             <FontAwesomeIcon className='text-[#FDCC0D]' icon={faStar} />
                             <FontAwesomeIcon className='text-[#FDCC0D]' icon={faStar} />
@@ -48,7 +48,7 @@ const SingleToyDetails = () => {
                             <FontAwesomeIcon className='text-[#FDCC0D]' icon={faStarHalf} />
                             {ratings}
                         </p>
-                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#874b30] font-bold'>Quantity:</span> {quantity}</p>
+                        <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'><span className='text-[#8b6753] font-bold'>Quantity:</span> {quantity}</p>
                         <p className='text-[17px] font-semibold mb-4 text-[#8b6753]'></p>
                     </div>
                     <p className='text-[17px] font-semibold  text-[#8b6753]'><span>{description}</span></p>

@@ -42,10 +42,10 @@ const UpdateToy = () => {
     }
     return (
 
-        <div className="card lg:card-side w-[80%] mx-auto border border-[#874b30] bg-white my-24">
+        <div className="card lg:card-side w-[80%] mx-auto border border-[#8b6753] bg-white my-24">
             <figure className='w-1/4'><img className='h-full' src={imageUrl} alt="Album" /></figure>
             <div className="card-body my-auto ">
-                <h2 className="text-[#874b30] font-semibold  text-3xl  ">{toyName}</h2>
+                <h2 className="text-[#8b6753] font-semibold  text-3xl  ">{toyName}</h2>
                 <p className='mb-4 text-xs'>Please enter your update details</p>
 
                 <form onSubmit={handleSubmit} className='flex flex-col  justify-between '>
@@ -77,7 +77,7 @@ const UpdateToy = () => {
                     </div>
 
 
-                    <input type="submit" className="btn bg-[#874b30] w-full mt-8 border-none" value="Update" />
+                    <input type="submit" className="btn bg-[#8b6753] w-full mt-8 border-none" value="Update" />
 
                 </form>
 

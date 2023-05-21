@@ -23,21 +23,17 @@ const Category = () => {
         <div className='w-[80%] mx-auto'>
             <nav className='flex justify-center min-h-[35px] '>
                 <NavLink onClick={() => handleLinkClick('teddy bear')} className={({ isActive }) =>
-                    isActive ? "me-8 text-[#874b30] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2" : "me-5 text-[#874b30] font-semibold"
+                    isActive ? "me-8 text-[#8b6753] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2 text-lg" : "me-5 text-[#8b6753] font-bold"
                 }>Teddy beer</NavLink>
-                <NavLink onClick={() => handleLinkClick('bird')} className={({ isActive }) =>
-                    isActive ? "me-8 text-[#874b30] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2" : "me-5 text-[#874b30] font-semibold"
-                }>Bird Toy</NavLink>
+
 
                 <NavLink onClick={() => handleLinkClick('dragon')} className={({ isActive }) =>
-                    isActive ? "me-8 text-[#874b30] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2" : "me-5 text-[#874b30] font-semibold"
-                }>Dragon Toy</NavLink>
+                    isActive ? "me-8 text-[#8b6753] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2 text-lg" : "me-5 text-[#8b6753] font-bold"
+                }>Dragon</NavLink>
                 <NavLink onClick={() => handleLinkClick('animal')} className={({ isActive }) =>
-                    isActive ? "me-8 text-[#874b30] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2" : "me-5 text-[#874b30] font-semibold"
-                }>Animal Toy</NavLink>
-                <NavLink onClick={() => handleLinkClick('fish')} className={({ isActive }) =>
-                    isActive ? "me-8 text-[#874b30] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2" : "me-5 text-[#874b30] font-semibold"
-                }>Fish Toy</NavLink>
+                    isActive ? "me-8 text-[#8b6753] font-semibold focus:after:content-[''] focus:after:w-[40px] focus:after:h-[1.5px] focus:after:block focus:after:bg-red-500 focus:after:mx-auto focus:after:mt-2 text-lg" : "me-5 text-[#8b6753] font-bold"
+                }>Animal</NavLink>
+
             </nav>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mt-12'>
                 {
@@ -47,7 +43,7 @@ const Category = () => {
                     ></SingleCategory>)
                 }
             </div>
-            <button onClick={() => setShowAll(!showAll)} className='btn  btn-wide mx-auto mt-12 flex items-center justify-center bg-[#874b30] border-0'>{!showAll ? 'Show All' : 'Show Less'}</button>
+            <button onClick={() => setShowAll(!showAll)} className='btn  btn-wide mx-auto mt-12 flex items-center justify-center bg-[#8b6753] border-0'>{!showAll ? 'Show All' : 'Show Less'}</button>
 
         </div>
     );

@@ -4,7 +4,7 @@
 
 .label-text,
 .card {
-    @apply text-[#874b30]
+    @apply text-[#8b6753]
 }
 
 .card-body :where(p) {
@@ -12,12 +12,12 @@
 }
 
 .table {
-    @apply rounded-xl text-[#874b30] border border-[#874b30]
+    @apply rounded-xl text-[#8b6753] border border-[#8b6753]
 }
 
 
 .loading {
-    @apply text-[#874b30] bg-transparent border-none font-semibold text-2xl
+    @apply text-[#8b6753] bg-transparent border-none font-semibold text-2xl
 }
 
 .modal-box {

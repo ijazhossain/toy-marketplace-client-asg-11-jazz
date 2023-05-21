@@ -64,10 +64,10 @@ const Registration = () => {
             })
     }
     return (
-        <div className="card lg:card-side w-[80%] mx-auto border border-[#874b30] bg-white my-24">
+        <div className="card lg:card-side w-[80%] mx-auto border border-[#8b6753] bg-white my-24">
             <figure><img className='h-full' src={img} alt="Album" /></figure>
             <div className="card-body my-auto ">
-                <h2 className="text-[#874b30] font-semibold  text-3xl  ">Create an Account</h2>
+                <h2 className="text-[#8b6753] font-semibold  text-3xl  ">Create an Account</h2>
                 <p className='mb-4 text-xs'>Let's get started with us.</p>
                 <form onSubmit={handleRegister}>
                     <div className="form-control mb-4">
@@ -113,10 +113,10 @@ const Registration = () => {
                             <input type="password" name='confirmPassword' placeholder="Confirm your password" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <input className='w-full bg-[#874b30] mt-8 py-2 text-white rounded-lg' type="submit" value="Create Account" />
+                    <input className='w-full bg-[#8b6753] mt-8 py-2 text-white rounded-lg' type="submit" value="Create Account" />
                 </form>
                 <SocialLogin>Sign up with Google</SocialLogin>
-                <p className='mt-5'>Already have an account? <Link to="/login" className='text-[#874b30] font-semibold '>Login</Link></p>
+                <p className='mt-5'>Already have an account? <Link to="/login" className='text-[#8b6753] font-semibold '>Login</Link></p>
                 <p className='text-red-500 font-bold'>{error}</p>
 
             </div>

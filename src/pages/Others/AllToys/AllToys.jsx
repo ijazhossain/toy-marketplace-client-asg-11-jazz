@@ -40,21 +40,21 @@ const AllToys = () => {
     return (
         <div className='w-[80%] mx-auto'>
             <div className='relative w-1/2 mx-auto my-12'>
-                <input onChange={e => setSearchText(e.target.value)} className='w-full h-12 border border-[#874b30] rounded-xl text-[#874b30] px-5' type="search" name="" id="" placeholder='Search By Name' />
-                <button onClick={handleSearch} className='absolute top-0 right-0 h-12 bg-[#874b30] rounded-s-none rounded-e-xl px-5 text-white'>Search</button>
+                <input onChange={e => setSearchText(e.target.value)} className='w-full h-12 border border-[#8b6753] rounded-xl text-[#8b6753] px-5' type="search" name="" id="" placeholder='Search By Name' />
+                <button onClick={handleSearch} className='absolute top-0 right-0 h-12 bg-[#8b6753] rounded-s-none rounded-e-xl px-5 text-white'>Search</button>
             </div>
             <div>
 
                 <table className="table table-zebra w-full ">
                     <thead >
                         <tr >
-                            <th className='bg-[#874b30] text-white' >#</th>
-                            <th className='bg-[#874b30] text-white'>Seller</th>
-                            <th className='bg-[#874b30] text-white'>Toy name</th>
-                            <th className='bg-[#874b30] text-white'>Sub-Category</th>
-                            <th className='bg-[#874b30] text-white'>Price</th>
-                            <th className='bg-[#874b30] text-white'>Quantity</th>
-                            <th className='bg-[#874b30] text-white'></th>
+                            <th className='bg-[#8b6753] text-white' >#</th>
+                            <th className='bg-[#8b6753] text-white'>Seller</th>
+                            <th className='bg-[#8b6753] text-white'>Toy name</th>
+                            <th className='bg-[#8b6753] text-white'>Sub-Category</th>
+                            <th className='bg-[#8b6753] text-white'>Price</th>
+                            <th className='bg-[#8b6753] text-white'>Quantity</th>
+                            <th className='bg-[#8b6753] text-white'></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,7 +66,7 @@ const AllToys = () => {
                                 <td>{toy.category.toUpperCase()}</td>
                                 <td>${toy.price}</td>
                                 <td>{toy.quantity}</td>
-                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 bg-[#874b30] text-white rounded-lg h-[40px] btn btn-sm border-0 text-xs '>Details</button></td>
+                                <td><button onClick={() => navigate(`/toy/${toy._id}`)} className='ml-5 bg-[#8b6753] text-white rounded-lg h-[40px] btn btn-sm border-0 text-xs '>Details</button></td>
                             </tr>)
                         }
                     </tbody>
